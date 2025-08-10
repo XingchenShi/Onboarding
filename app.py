@@ -50,7 +50,7 @@ def parse_now_and_tz():
 def health():
     return jsonify({"status": "ok"})
 
-@app.get("/api/parking/active")
+@app.get("/parking/active")
 def api_parking_active():
     try:
         now_dt, tzname = parse_now_and_tz()
