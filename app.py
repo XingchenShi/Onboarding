@@ -126,9 +126,9 @@ def api_parking_active():
                 unique_rows.append(row)
         rows = unique_rows
         # If count > 200, randomly sample between 100 and 200
-        if len(rows) > 200:
-            sample_size = random.randint(100, 200)
-            rows = random.sample(rows, min(sample_size, len(rows)))
+        # if len(rows) > 200:
+        #     sample_size = random.randint(100, 200)
+        #     rows = random.sample(rows, min(sample_size, len(rows)))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     finally:
